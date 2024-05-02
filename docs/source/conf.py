@@ -6,7 +6,8 @@ project = '日落图书馆'
 copyright = '2024, ネオン様'
 author = 'Eineon'
 
-release = '1.0'
+release = '1E'
+version = 'v1.0'
 
 html_last_updated_fmt = "%Y/%m/%d"
 
