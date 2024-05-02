@@ -1,2 +1,2 @@
 # 日落图书馆
-https://sunsetlib.readthedocs.io/stable/index.html
+https://sunsetlib.readthedocs.io/index.html
