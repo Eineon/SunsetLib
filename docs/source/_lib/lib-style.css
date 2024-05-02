@@ -1,0 +1,38 @@
+.V {
+  font-family: Wingdings;
+}
+
+.mouse-event {
+  position: relative; /* 相对定位 */
+  display: inline; /* 布局 */
+  cursor: pointer; /* 设置鼠标样式为手指 */
+  }
+  .show {
+  position: absolute; /* 绝对定位 */
+  display: none; /* 初始隐藏 */
+  top: 100%;
+  left: 50%;
+  transform: translateX(-5%);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  color: rgb(59,236,205);
+  font-size: 14px;
+  border-radius: 5px;
+  z-index: 9;
+  width: 30em;
+  }
+  .mouse-event:hover .show {
+  display: block;
+}
+
+.UP {
+  position: relative;
+  }
+  .UP span {
+  position: absolute;
+  bottom: 1.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  white-space: nowrap;
+}
