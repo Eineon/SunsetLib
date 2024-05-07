@@ -1,7 +1,8 @@
-昨日重现
+魔法师
 =================================
 
 ..  toctree::
     :maxdepth: 2
 
-    魔法师 <TheMagus/index>
+    chapter01
+    chapter02
