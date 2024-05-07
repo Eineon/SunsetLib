@@ -4,4 +4,4 @@
 ..  toctree::
     :maxdepth: 2
 
-    集结，魔导师！ <魔导师/LOG>
+    魔法师 <TheMagus/LOG>
