@@ -4,4 +4,4 @@ recommonmark
 sphinx
 sphinx-markdown-tables
 sphinx-wagtail-theme
-sphinx-pdj-theme
+sphinx-press-theme
