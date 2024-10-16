@@ -1,7 +1,7 @@
 昨日重现
 =================================
 
-删除..  toctree::
+..  toctree::
     :maxdepth: 2
 
-    
+    最终编年史 <Last Chronicle/index>
