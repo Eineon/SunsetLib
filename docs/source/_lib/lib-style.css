@@ -1,17 +1,19 @@
 @font-face {
   font-family: 'Ar-Ciela'; /* 自定义的字体名称 */
-  src: url('../_fonts/Ar-Ciela.woff2') format('woff2'), /* 适合现代浏览器 */
-       url('../_fonts/Ar-Ciela.woff') format('woff'), /* 较老浏览器 */
-       url('../_fonts/Ar-Ciela.ttf') format('truetype'); /* 其他浏览器 */
+  src: local('Ar-Ciela'),
+       url('../_fonts/ar-ciela.woff2') format('woff2'), /* 适合现代浏览器 */
+       url('../_fonts/ar-ciela.woff') format('woff'), /* 较老浏览器 */
+       url('../_fonts/ar-ciela.ttf') format('truetype'); /* 其他浏览器 */
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Hymmnos'; /* 自定义的字体名称 */
-  src: url('../_fonts/Hymmnos.woff2') format('woff2'), /* 适合现代浏览器 */
-       url('../_fonts/Hymmnos.woff') format('woff'), /* 较老浏览器 */
-       url('../_fonts/Hymmnos.ttf') format('truetype'); /* 其他浏览器 */
+  src: local('Hymmnos'),
+       url('../_fonts/hymmnos.woff2') format('woff2'), /* 适合现代浏览器 */
+       url('../_fonts/hymmnos.woff') format('woff'), /* 较老浏览器 */
+       url('../_fonts/hymmnos.ttf') format('truetype'); /* 其他浏览器 */
   font-weight: normal;
   font-style: normal;
 }
