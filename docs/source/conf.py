@@ -5,9 +5,7 @@
 project = '日落图书馆'
 copyright = '2024, ネオン様'
 author = 'Eineon'
-
-release = '1E'
-version = 'v1.0'
+version = '1.0'
 
 html_last_updated_fmt = "%Y/%m/%d"
 
@@ -32,9 +30,9 @@ intersphinx_disabled_domains = ['std']
 templates_path = ['_templates']
 
 # -- Options for HTML output
-import solar_theme
-html_theme = 'solar_theme'
-html_theme_path = [solar_theme.theme_path]
+import sphinx_pdj_theme
+html_theme = 'sphinx_pdj_theme'
+html_theme_path = [sphinx_pdj_theme.get_html_theme_path()]
 
 html_static_path = ["_lib"]
 html_css_files = ["lib-style.css"]
