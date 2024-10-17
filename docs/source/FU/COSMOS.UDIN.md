@@ -71,14 +71,13 @@
   相较于原始月咏符文，诗音符文提供了更全面、简洁的书写系统。根据使用种族、地区、年代等条件差异，诗音符文存在不同音律差异。音律不同之符文间可能存在冲突，因此不能同时使用。
 
 #### 表：月咏符文
-![月咏符文字母](../_lib/Ar_Ciela_Alphabet.png)
-![月咏符文FMCL](../_lib/Ar_Ciela_FMCL.png)
-![月咏符文AMCL](../_lib/Ar_Ciela_AMCL.png)
+<img src="../_lib/Ar_Ciela_Alphabet.png" alt="月咏符文字母" width=100%>
+<img src="../_lib/Ar_Ciela_FMCL.png" alt="月咏符文FMCL" width=100%>
+<img src="../_lib/Ar_Ciela_AMCL.png" alt="月咏符文AMCL" width=100%>
 
 #### 表：诗音符文
-![诗音符文字母](../_lib/Hymmnos.png)
+<img src="../_lib/Hymmnos.png" alt="诗音符文字母" width=100%>
 
 ### 第四条：认知世界
 
 环境信息通过生物感官输入灵髓，并最终在虚境中处理成能够被思想理解的形态。灵髓只能存在于实境，而思想则只能存在于虚境。这两点限制了生物无论如何都无法单独认知实境或虚境，在此过程中必然遭遇沉余信息带来的干扰。
-
