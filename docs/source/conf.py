@@ -20,7 +20,6 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
     'sphinx_markdown_tables',
-    'sphinx_wagtail_theme',
     'recommonmark',
 ]
 
@@ -33,7 +32,9 @@ intersphinx_disabled_domains = ['std']
 templates_path = ['_templates']
 
 # -- Options for HTML output
-html_theme = 'press'
+import solar_theme
+html_theme = 'solar_theme'
+html_theme_path = [solar_theme.theme_path]
 
 html_static_path = ["_lib"]
 html_css_files = ["lib-style.css"]
