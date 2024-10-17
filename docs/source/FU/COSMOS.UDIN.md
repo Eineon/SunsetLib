@@ -71,14 +71,20 @@
   相较于原始月咏符文，诗音符文提供了更全面、简洁的书写系统。根据使用种族、地区、年代等条件差异，诗音符文存在不同音律差异。音律不同之符文间可能存在冲突，因此不能同时使用。
 
 #### 表：月咏符文
+<span class=显隐>
 ![月咏符文字母](../_lib/Ar_Ciela_Alphabet.png)
-
+</span>
+<span class=显隐>
 ![月咏符文FMCL](../_lib/Ar_Ciela_FMCL.png)
-
+</span>
+<span class=显隐>
 ![月咏符文AMCL](../_lib/Ar_Ciela_AMCL.png)
+</span>
 
 #### 表：诗音符文
+<span class=显隐>
 ![诗音符文字母](../_lib/Hymmnos.png)
+</span>
 
 ### 第四条：认知世界
 
