@@ -1,13 +1,26 @@
+@font-face {
+  font-family: 'Ar-Ciela'; /* 自定义的字体名称 */
+  src: url('../_fonts/ar-ciela.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Hymmnos'; /* 自定义的字体名称 */
+  src: url('../_fonts/hymmnos.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 button {
   font-size: 14px;
 }
 
-.Hy {
-  font-family: Hymmnos;
+.Ar {
+  font-family: Ar-Ciela;
 }
 
-.Ar {
-  font-family: Ar-Ciela(Compartment);
+.Hy {
+  font-family: Hymmnos;
 }
 
 .显隐 {
