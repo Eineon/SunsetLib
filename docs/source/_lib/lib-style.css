@@ -1,10 +1,16 @@
-button {
-  font-size: 14px;
-}
 
 h5 {
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 15px;
   margin-bottom: 0;
+}
+
+p {
+  margin-top: 2px;
+}
+
+button {
+  font-size: 14px;
 }
 
 .UP {
@@ -24,25 +30,29 @@ h5 {
   height: 6em;
 }
 
-.mouse-event {
+.CMT {
   position: relative; /* 相对定位 */
   display: inline; /* 布局 */
-  cursor: pointer; /* 设置鼠标样式为手指 */
-  }
-  .show {
+  cursor: help; /* 设置鼠标样式 */
+}
+.show {
   position: absolute; /* 绝对定位 */
   display: none; /* 初始隐藏 */
-  top: 100%;
-  left: 50%;
-  transform: translateX(-5%);
-  background-color: rgba(0, 0, 0, 0.25);
+  opacity: 0; /* 初始透明度为0 */
+  top: 75%;
+  left: 75%;
+  transform: translateX(0%);
+  background-color: rgba(0, 0, 0, 0.75);
   padding: 5px;
-  color: rgb(59,236,205);
-  font-size: 14px;
+  color: rgb(255,255,255);
+  font-size: 13px;
+  border: 1px solid rgb(115,207,255);
   border-radius: 5px;
   z-index: 9;
-  width: 30em;
-  }
-  .mouse-event:hover .show {
+  width: 32em;
+  transition: opacity 0.5s ease; /* 添加过渡效果 */
+}
+.CMT:hover .show {
   display: block;
+  opacity: 1; /* 鼠标悬停时，透明度为1 */
 }
