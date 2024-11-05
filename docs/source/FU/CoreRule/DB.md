@@ -49,7 +49,7 @@
 
 
 ##### 匕首　　　　　　｜　武器 0
-<span class="[TAG]物理"></span> <span class="[TAG]白刃"> <span class="[TAG]投掷"></span> <span class="[TAG]轻型"></span><br>
+<span class="[TAG]物理"></span> <span class="[TAG]白刃"></span> <span class="[TAG]投掷"></span> <span class="[TAG]轻型"></span><br>
 **信息**：1/1　｜　**威力**：2<br>
 **负荷**：1<br>
 **需求**：位于前场或中场<br>
@@ -59,7 +59,7 @@
 使用本武器的<span class="[TAG]攻击"></span>动作进行主动及被动检定时，可以将当前DEX作为AAS。
 
 ##### 短剑　　　　　　｜　武器 0
-<span class="[TAG]物理"></span> <span class="[TAG]白刃"> <span class="[TAG]近战"></span> <span class="[TAG]轻型"></span><br>
+<span class="[TAG]物理"></span> <span class="[TAG]白刃"></span> <span class="[TAG]近战"></span> <span class="[TAG]轻型"></span><br>
 **信息**：2/1　｜　**威力**：4<br>
 **负荷**：1+<br>
 **需求**：位于前场<br>
@@ -69,7 +69,7 @@
 使用本武器的<span class="[TAG]攻击"></span>动作进行主动及被动检定时，可以将当前DEX作为AAS。
 
 ##### 长剑　　　　　　｜　武器 0
-<span class="[TAG]物理"></span> <span class="[TAG]白刃"> <span class="[TAG]近战"></span></span><br>
+<span class="[TAG]物理"></span> <span class="[TAG]白刃"></span> <span class="[TAG]近战"></span></span><br>
 **信息**：2/1　｜　**威力**：6<br>
 **负荷**：2+<br>
 **需求**：位于前场<br>
@@ -78,7 +78,7 @@
 安装本武器时，可以将负荷增加最多2点，使武器的威力获得 `增加的负荷*2` 点内在加值。
 
 ##### 巨剑　　　　　　｜　武器 0
-<span class="[TAG]物理"></span> <span class="[TAG]白刃"> <span class="[TAG]近战"></span> <span class="[TAG]重型"></span><br>
+<span class="[TAG]物理"></span> <span class="[TAG]白刃"></span> <span class="[TAG]近战"></span> <span class="[TAG]重型"></span><br>
 **信息**：2/1　｜　**威力**：10<br>
 **负荷**：4<br>
 **需求**：位于前场<br>

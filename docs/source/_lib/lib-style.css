@@ -53,7 +53,7 @@ button {
   border: 1px solid rgb(115,207,255);
   border-radius: 10px;
   z-index: 9;
-  width: 64em;
+  width: 44em;
   transition: opacity 0.4s ease; /* 添加过渡效果 */
 }
 .CMT:hover .show {
