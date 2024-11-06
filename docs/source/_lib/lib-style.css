@@ -1,8 +1,18 @@
 
-h2 h3 h4 {
-  margin-bottom: 5px;
+h1 {
+  font-size: 32px;
 }
-
+h2 {
+  font-size: 25px;
+}
+h3 {
+  font-size: 22px;
+  margin: 10px;
+}
+h4 {
+  font-size: 20px;
+  margin: 10px;
+}
 h5 {
   font-weight: bold;
   font-size: 14px;
@@ -53,7 +63,7 @@ button {
   border: 1px solid rgb(115,207,255);
   border-radius: 10px;
   z-index: 9;
-  width: 44em;
+  width: 48em;
   transition: opacity 0.4s ease; /* 添加过渡效果 */
 }
 .CMT:hover .show {
