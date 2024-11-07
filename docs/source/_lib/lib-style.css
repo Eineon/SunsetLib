@@ -3,15 +3,15 @@ h1 {
   font-size: 32px;
 }
 h2 {
-  font-size: 25px;
+  font-size: 26px;
 }
 h3 {
-  font-size: 22px;
-  margin: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 h4 {
-  font-size: 20px;
-  margin: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 h5 {
   font-weight: bold;
@@ -21,6 +21,7 @@ h5 {
 
 p {
   margin-top: 2px;
+  margin-bottom: 10px;
 }
 
 button {
@@ -57,7 +58,7 @@ button {
   left: 75%;
   transform: translateX(0%);
   background-color: rgba(0, 0, 0, 0.75);
-  padding: 5px;
+  padding: 10px;
   color: rgb(255,255,255);
   font-size: 13px;
   border: 1px solid rgb(115,207,255);
