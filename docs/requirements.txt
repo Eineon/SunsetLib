@@ -3,4 +3,4 @@ pillow
 recommonmark
 sphinx
 sphinx-markdown-tables
-furo
+sphinx-book-theme

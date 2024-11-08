@@ -30,7 +30,7 @@ intersphinx_disabled_domains = ['std']
 templates_path = ['_templates']
 
 # -- Options for HTML output
-html_theme = 'furo'
+html_theme = 'sphinx_book_theme'
 
 html_static_path = ["_lib"]
 html_css_files = ["lib-style.css"]
