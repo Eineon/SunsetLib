@@ -30,9 +30,7 @@ intersphinx_disabled_domains = ['std']
 templates_path = ['_templates']
 
 # -- Options for HTML output
-import solar_theme
-html_theme = 'solar_theme'
-html_theme_path = [solar_theme.theme_path]
+html_theme = 'furo'
 
 html_static_path = ["_lib"]
 html_css_files = ["lib-style.css"]
