@@ -3,4 +3,4 @@ pillow
 recommonmark
 sphinx
 sphinx-markdown-tables
-pydata-sphinx-theme
+sphinx-book-theme
