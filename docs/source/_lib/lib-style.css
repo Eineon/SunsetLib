@@ -64,8 +64,8 @@ button {
   border: 1px solid rgb(115,207,255);
   border-radius: 8px;
   z-index: 9;
-  width: 80vw;
-  max-width: 46em;
+  width: calc(100% - 20px);
+  max-width: 47em;
   transition: opacity 0.4s ease; /* 添加过渡效果 */
 }
 .show span {
