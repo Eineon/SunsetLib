@@ -28,7 +28,7 @@
 
 #### 武器列表
 
-##### 体术　　　　｜　武器 0
+##### 体术　　　　　｜　武器 0
 <span class="[TAG]物理"></span> <span class="[TAG]搏击"></span> <span class="[TAG]近战"></span> <span class="[TAG]轻型"></span><br>
 **信息**：-/-　｜　**威力**：0<br>
 **负荷**：0<br>
