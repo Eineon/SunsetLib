@@ -142,11 +142,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // 定义格式化函数
   function tagFormat(key, text, value) {
-    return `<div class="CMT"><a href="##">${key}${text}</a><div class="show"><span>${key}</span><br>———————————————————————————————————————————————<br>${value}</div></div>`;
+    return `<div class="CMT"><a href="##">${key}${text}</a><div class="show"><span>${key}</span><br>——————————————————————————————————————————————<br>${value}</div></div>`;
   }
 
   function efctFormat(key, text, value) {
-    return `<div class="CMT"><a href="##">${text}</a><div class="show"><span>${key}</span><br>———————————————————————————————————————————————<br>${value}</div></div>`;
+    return `<div class="CMT"><a href="##">${text}</a><div class="show"><span>${key}</span><br>——————————————————————————————————————————————<br>${value}</div></div>`;
   }
 
   // 调用函数处理 tagData 和 efctData
