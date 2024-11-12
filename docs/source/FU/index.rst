@@ -21,7 +21,7 @@ Fabula Ultima
         <div style="margin-top: 1em;">　　　　——大公爵・<span class=UP><span>アステア</span>阿斯泰尔</span></div>
 
 ..  toctree::
-    :maxdepth: 3
+    :maxdepth: 1
 
     世界设定 <Worlds/index>
     核心规则 <CoreRule/index>

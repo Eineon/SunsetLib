@@ -29,7 +29,8 @@ intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
 
-source_encoding = 'utf-8'
+language = 'zh_CN'
+html_search_language = 'zh_CN'
 
 # -- Options for HTML output
 html_theme = 'sphinx_book_theme'
