@@ -17,7 +17,7 @@ h5 {
   font-weight: bold;
   font-size: 15px;
   margin-bottom: 0;
-  border-left: 1.5px solid;
+  border-left: 2px solid;
   padding-left: 5px;
 }
 
@@ -68,7 +68,7 @@ button {
   border: 1px solid rgb(115,207,255);
   border-radius: 8px;
   z-index: 9;
-  width: 32em;
+  width: 36em;
   transition: opacity 0.4s ease; /* 添加过渡效果 */
 }
 .show span {
