@@ -39,7 +39,7 @@ myst_substitutions = {
 }
 
 source_suffix = [".md"]
-master_doc = "home"
+master_doc = "index"
 
 # -- Project information
 
