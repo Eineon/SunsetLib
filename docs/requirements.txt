@@ -1,6 +1,0 @@
-commonmark
-pillow
-recommonmark
-sphinx
-sphinx-markdown-tables
-sphinx-book-theme

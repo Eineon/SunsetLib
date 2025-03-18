@@ -1,82 +1,161 @@
+@font-face {
+  font-family: "Sarasa Fixed SC";
+  src: url('fonts/SarasaFixedSC-Regular.ttf') format('truetype');
+}
 
-h1 {
-  font-size: 32px;
-}
-h2 {
-  font-size: 26px;
-}
-h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
+h1,
+h2,
+h3,
 h4 {
-  font-size: 16px;
-  margin-bottom: 10px;
+  border-bottom: 2px solid;
 }
+
 h5 {
-  font-weight: bold;
-  font-size: 15px;
-  margin-bottom: 0;
-  border-left: 2px solid;
-  padding-left: 5px;
+  border-left: 3px solid var(--color-foreground-primary);
+  margin-top: 1.5rem;
+  font-size: 1rem;
+}
+
+:target>h1:first-of-type,
+:target>h2:first-of-type,
+:target>h3:first-of-type,
+:target>h4:first-of-type,
+:target>h5:first-of-type,
+:target>h6:first-of-type,
+span:target~h1:first-of-type,
+span:target~h2:first-of-type,
+span:target~h3:first-of-type,
+span:target~h4:first-of-type,
+span:target~h5:first-of-type,
+span:target~h6:first-of-type {
+  background: linear-gradient(0deg,
+      color-mix(in srgb, var(--color-brand-primary), transparent 25%) 00%,
+      transparent 75%);
+  border-bottom: 2px solid var(--color-brand-primary);
 }
 
 p {
   font-size: 14px;
-  margin-top: 2px;
-  margin-bottom: 10px;
+  line-height: 2;
+  margin-top: .75em;
+  margin-bottom: .75em;
 }
 
-button {
-  font-size: 14px;
+[class*=admonition] {
+  overflow: visible;
 }
 
-.UP {
+.admonition p.admonition-title,
+p.topic-title {
+  font-weight: bold;
+}
+
+.title {
+  color: var(--color-brand-primary);
+}
+
+.sd-dropdown .sd-summary-text,
+.sd-dropdown .sd-summary-state-marker {
+  color: var(--color-foreground-primary);
+}
+
+.sd-dropdown:has(> .sd-bg-primary) {
+  border-left: .2rem solid var(--color-admonition-title--important) !important;
+}
+
+.sd-dropdown summary {
+  font-size: var(--admonition-title-font-size) !important;
+  line-height: 1.3 !important;
+  padding: .4rem .5rem !important;
+  border: none !important;
+}
+
+.sd-dropdown .sd-bg-primary {
+  background-color: var(--color-admonition-title-background--important) !important;
+}
+
+.sd-dropdown .sd-bg-primary .sd-summary-icon svg {
+  color: var(--color-admonition-title--important);
+}
+
+.sd-dropdown:has(> .sd-bg-secondary) {
+  border-left: .2rem solid var(--color-admonition-title--tip) !important;
+}
+
+.sd-dropdown .sd-bg-secondary {
+  background-color: var(--color-admonition-title-background--tip) !important;
+}
+
+.sd-dropdown .sd-bg-secondary .sd-summary-icon svg {
+  color: var(--color-admonition-title--tip);
+}
+
+.sd-dropdown:has(> .sd-bg-info) {
+  border-left: .2rem solid var(--color-admonition-title--note) !important;
+}
+
+.sd-dropdown .sd-bg-info {
+  background-color: var(--color-admonition-title-background--note) !important;
+}
+
+.sd-dropdown .sd-bg-info .sd-summary-icon svg {
+  color: var(--color-admonition-title--note);
+}
+
+table.docutils {
+  margin-left: 0;
+}
+
+table.docutils td {
+  background-color: none;
+}
+
+table.docutils tbody tr {
+  background-color: transparent;
+  transition: background-color .2s ease;
+}
+
+table.docutils tbody tr:hover {
+  background-color: color-mix(in srgb, var(--color-theme-secondary), transparent 95%);
+}
+
+a {
+  text-decoration: none;
+}
+
+.annot {
   position: relative;
+  white-space: nowrap;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
-.UP span {
+
+.annot .up-note {
   position: absolute;
-  bottom: 1.5em;
+  bottom: 120%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 12px;
+  font-size: 11px;
+  line-height: 0;
+}
+
+.form {
+  font-family: 'Sarasa Fixed SC', 'consolas', monospace;
+  font-size: .95em;
+  margin: 0 .25em;
+  color: var(--color-brand-primary);
   white-space: nowrap;
 }
 
-.显隐 {
-  display: none;
-  height: 6em;
+.hint {
+  cursor: help;
 }
 
-.CMT {
-  position: relative; /* 相对定位 */
-  display: inline; /* 布局 */
-  cursor: help; /* 设置鼠标样式 */
+.note-icon {
+  font-family: 'meiryo', 'simsun';
 }
-.show {
-  position: absolute; /* 绝对定位 */
-  display: none; /* 初始隐藏 */
-  opacity: 0; /* 初始透明度为0 */
-  top: 80%;
-  left: 80%;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 8px;
-  color: rgb(255,255,255);
-  font-size: 13px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  border: 1px solid rgb(115,207,255);
-  border-radius: 8px;
-  z-index: 9;
-  width: 36em;
-  transition: opacity 0.4s ease; /* 添加过渡效果 */
-}
-.show span {
-  font-weight: bold;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-.CMT:hover .show {
-  display: block;
-  opacity: 1; /* 鼠标悬停时，透明度为1 */
+
+hr.card-hr {
+  background-color: var(--color-foreground-primary);
+  margin: 0;
 }
