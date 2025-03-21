@@ -12,26 +12,17 @@ extensions = [
     "sphinx_copybutton",
 ]
 myst_enable_extensions = [
-    # 用$和$$封装的数学和 LaTeX 数学公式解析
-    "dollarmath",
-    "amsmath",
-    # 定义列表
-    "deflist",
-    # 冒号的代码围栏
-    "colon_fence",
-    # HTML 警告
-    "html_admonition",
-    # HTML 图像
-    "html_image",
-    # 智能引号与替换件
-    "smartquotes",
-    "replacements",
-    # 链接
-    "linkify",
-    # 替换
-    "substitution",
-    # 任务列表
-    "tasklist",
+    "dollarmath",  # 行内数学公式
+    "amsmath",  # AMS 数学公式
+    "deflist",  # 定义列表
+    "colon_fence",  # 冒号的代码围栏
+    "html_admonition",  # HTML 警告
+    "html_image",  # HTML 图像
+    # "smartquotes",  # 智能引号
+    # "replacements",  # 排版文本转换
+    "linkify",  # 链接
+    "substitution",  # 替换
+    "tasklist",  # 任务列表
 ]
 # 全局替换
 myst_substitutions = {
