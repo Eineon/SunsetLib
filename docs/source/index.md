@@ -8,4 +8,5 @@ AST/index
 FU/index
 MGR/index
 PF/index
+SH/index
 :::
