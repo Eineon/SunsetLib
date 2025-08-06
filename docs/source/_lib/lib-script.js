@@ -25,8 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
     '~=': '≈',
     '<>': '⋄',
     '+-': '±',
-    '*': '×',
-    '/': '÷',
   };
   const symbolRegex = new RegExp(
     `(${Object.keys(symbolMap)
