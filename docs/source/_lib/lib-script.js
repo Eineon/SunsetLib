@@ -11,7 +11,7 @@ const FNData = {
 
 document.addEventListener('DOMContentLoaded', () => {
   const FNRegex = /【FN:([^【】]+)】/g;
-  const annotRegex = /（([^:（]+):([^）]+)）/g;
+  const rubyRegex = /（([^:（]+):([^）]+)）/g;
   const symbolMap = {
     '<--': '←',
     '-->': '→',
@@ -37,9 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
       .replace(FNRegex, (_, t1) => {
         return `<a tabindex="0" title="${FNData[t1]}" class="hint">${t1}</a>`;
       })
-      // 处理 annotRegex
-      .replace(annotRegex, (_, t1, t2) => {
-        return `<span class="annot">${t1}<span class="up-note">${t2}</span></span>`;
+      // 处理 rubyRegex
+      .replace(rubyRegex, (_, t1, t2) => {
+        return `<ruby class="annot">${t1}<rt class="up-note">${t2}</rt></ruby>`;
       })
       // 处理 formRegex
       .replace(/［/g, '<span class="form">⦗').replace(/］/g, '⦘</span>');
