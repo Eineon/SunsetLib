@@ -5,4 +5,6 @@
 :maxdepth: 2
 
 ADD.RULE
+CLASS/index
+REPLAY/index
 :::
