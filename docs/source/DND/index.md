@@ -6,6 +6,7 @@
 :maxdepth: 2
 
 ADD.RULE
+SPELLS
 CLASS/index
 REPLAY/index
 :::
