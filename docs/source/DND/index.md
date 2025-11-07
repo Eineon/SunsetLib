@@ -5,7 +5,7 @@
 :::{toctree}
 :maxdepth: 2
 
-ADD.RULE
+MAIN
 SPELLS
 CLASS/index
 REPLAY/index
