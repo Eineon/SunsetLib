@@ -13,9 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const FNRegex = /【FN:([^【】]+)】/g;
   const rubyRegex = /（([^:（]+):([^）]+)）/g;
   const symbolMap = {
-    '<--': '←',
-    '-->': '→',
-    '<->': '↔',
     '<==': '⇐',
     '==>': '⇒',
     '<=>': '⇔',
