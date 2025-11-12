@@ -6,6 +6,7 @@
 :maxdepth: 2
 
 MAIN
+FEATS
 SPELLS
 CLASS/index
 REPLAY/index
