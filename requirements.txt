@@ -10,4 +10,6 @@ linkify-it-py
 sphinxcontrib-mermaid
 sphinx-design
 sphinx-design-elements
+sphinx_togglebutton
 sphinx-copybutton
+sphinx-tippy

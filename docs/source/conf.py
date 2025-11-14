@@ -4,12 +4,16 @@ import datetime
 
 # -- General configuration
 extensions = [
-    # 'myst_parser',
+    "sphinx.ext.autosectionlabel",
+    "sphinx.ext.todo",
+    # "myst_parser",
     "myst_nb",
-    "sphinxcontrib.mermaid",
     "sphinx_design",
     "sphinx_design_elements",
     "sphinx_copybutton",
+    "sphinx_tippy",
+    "sphinx_togglebutton",
+    "sphinxcontrib.mermaid",
 ]
 myst_enable_extensions = [
     "dollarmath",  # 行内数学公式
