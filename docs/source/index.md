@@ -1,8 +1,7 @@
 # 首页
 
 :::{toctree}
-:caption: "日落图书馆"
-:maxdepth: 2
+:maxdepth: 1
 
 AST/index
 DND/index
