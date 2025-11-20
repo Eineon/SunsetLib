@@ -36,6 +36,11 @@ myst_substitutions = {
 source_suffix = [".md"]
 master_doc = "index"
 
+# Make sure the target is unique
+autosectionlabel_prefix_document = True
+
+todo_include_todos = True
+
 # -- Project information
 
 language = "zh_CN"
@@ -94,13 +99,3 @@ html_theme_options = {
 
 # -- Options for HTMLHelp output
 htmlhelp_basename = "日落图书馆"
-
-# -- Options for EPUB output
-epub_show_urls = "footnote"
-
-# -- Options for PDF output
-latex_engine = "xelatex"
-latex_use_xindy = False
-latex_elements = {
-    "preamble": "\\usepackage[UTF8]{ctex}\n",
-}
