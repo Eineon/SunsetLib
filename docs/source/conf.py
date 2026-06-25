@@ -1,10 +1,112 @@
 # Configuration file for the Sphinx documentation builder.
 
+import re
+import os
 import datetime
+from sphinx.application import Sphinx
+
+
+SYMBOL_MAP = {
+    "\\<--": "←",
+    "\\-->": "→",
+    "\\<->": "↔",
+    "\\<==": "⇐",
+    "\\==>": "⇒",
+    "\\<=>": "⇔",
+    "\\<>": "⋄",
+    "\\<=": "≤",
+    "\\>=": "≥",
+    "\\!=": "≠",
+    "\\~=": "≈",
+    "\\+-": "±",
+}
+
+GRID_SIZE = {
+    "L": "12",
+    "M": "6",
+    "S": "4",
+    "A": "auto"
+}
+
+CARD_RULES = [
+    {
+        "key": re.compile(r"【(sign):([^】:]+):?([^】]*)】"),
+        "value": [" {hyper}`", "{type=badge,color=secondary,outline=true}` "],
+    },
+    {
+        "key": re.compile(r"【(cell):([^】:]+):?([^】]*)】"),
+        "value": ["{hyper}`", "`"],
+    },
+    {
+        "key": re.compile(r"【(word):([^】:]+):?([^】]*)】"),
+        "value": ["{hyper}`", "`"],
+    },
+    {
+        "key": re.compile(r"【(term):([^】:]+):?([^】]*)】"),
+        "value": ["{term}`", "`"],
+    },
+]
+
+NODE_RULES = [
+    {
+        "key": re.compile(r"\[\[grid-([^:]+):((?:(?!\]\])[\s\S])*)\]\]", re.MULTILINE),
+        "value": lambda m: (
+            f"\n:::{{grid-item}}\n:columns: {GRID_SIZE[m.group(1)]}\n{m.group(2).strip()}\n:::\n"
+        ),
+    },
+    {
+        "key": re.compile(r"（(.*?):(.*?)）"),
+        "value": lambda m: (
+            f'<ruby class="annot">{m.group(1)}<rt class="up-note">{m.group(2)}</rt></ruby>'
+        ),
+    },
+    {
+        "key": re.compile(r"［(.*?)］"),
+        "value": lambda m: (f' <span class="form">⦗{m.group(1)}⦘</span> '),
+    },
+    {
+        "key": re.compile(r"\*\*(.*?)\*\*"),
+        "value": lambda m: (f'<span class="word">{m.group(1)}</span>'),
+    },
+]
+
+
+def process_content(source):
+    """应用所有替换规则到文本内容"""
+    content = source[0]
+    for symbol in sorted(SYMBOL_MAP, key=lambda k: -len(k)):
+        content = content.replace(symbol, SYMBOL_MAP[symbol])
+
+    for rule in CARD_RULES:
+        def card_rep(m, r=rule):
+            t0, t1, t2 = m.groups()
+            part = r["value"]
+            brL = "『" if t0 == "cell" else ""
+            brR = "』" if t0 == "cell" else ""
+            return f"{part[0]}{brL}{t2.replace('@', t1) if t2 else t1}{brR} <{t1}>{part[1]}"
+        content = rule["key"].sub(card_rep, content)
+
+    for rule in NODE_RULES:
+        content = rule["key"].sub(rule["value"], content)
+
+    source[0] = content
+
+
+def handle_source_read(app: Sphinx, docname: str, source: list):
+    """处理source-read事件"""
+    file_path = app.env.doc2path(docname)
+    if os.path.splitext(file_path)[1] == ".md":
+        process_content(source)
+
+
+def setup(app: Sphinx):
+    """Sphinx扩展入口"""
+    app.connect("source-read", handle_source_read)
+    return {"version": "0.1", "parallel_read_safe": True}
+
 
 # -- General configuration
 extensions = [
-    "sphinx.ext.autosectionlabel",
     "sphinx.ext.todo",
     # "myst_parser",
     "myst_nb",
@@ -16,15 +118,19 @@ extensions = [
     "sphinxcontrib.mermaid",
 ]
 myst_enable_extensions = [
-    "dollarmath",  # 行内数学公式
     "amsmath",  # AMS 数学公式
-    "deflist",  # 定义列表
+    "attrs_block",  # 区块属性
+    "attrs_inline",  # 行内属性
     "colon_fence",  # 冒号的代码围栏
+    "deflist",  # 定义列表
+    "dollarmath",  # 行内数学公式
+    "fieldlist",  # 字段列表
     "html_admonition",  # HTML 警告
     "html_image",  # HTML 图像
-    # "smartquotes",  # 智能引号
-    # "replacements",  # 排版文本转换
     "linkify",  # 链接
+    "replacements",  # 排版文本转换
+    # "smartquotes",  # 智能引号
+    "strikethrough",  # 删除线
     "substitution",  # 替换
     "tasklist",  # 任务列表
 ]
@@ -33,13 +139,43 @@ myst_substitutions = {
     # "替换对象": "替换内容",
 }
 
-source_suffix = [".md"]
-master_doc = "index"
+myst_url_schemes = {
+    "en-wiki": "https://en.wikipedia.org/wiki/{{path}}#{{fragment}}",
+    "zh-wiki": "https://zh.wikipedia.org/wiki/{{path}}#{{fragment}}",
+    "baike": "https://baike.baidu.com/item/{{path}}#{{fragment}}",
+    "gh-issue": {
+        "url": "https://github.com/Eineon/SunsetLib/issues/{{path}}#{{fragment}}",
+        "title": "议题#{{path}}",
+        "classes": ["github"],
+    },
+}
 
-# Make sure the target is unique
-autosectionlabel_prefix_document = True
+# 确保目标唯一
+myst_heading_anchors = 4
 
 todo_include_todos = True
+
+togglebutton_hint = "展示隐藏内容"
+
+tippy_props = {
+    "placement": "auto-start",
+    "maxWidth": 720,
+    "theme": "material",
+    "interactive": True,
+    "duration": [200, 400],
+    "delay": [200, 0],
+}
+tippy_skip_anchor_classes = (
+    "headerlink",
+    "sd-stretched-link",
+    "sd-rounded-pill",
+    "tippy-skip",
+)
+
+suppress_warnings = ["myst.xref_missing"]
+
+source_suffix = [".md"]
+master_doc = "index"
 
 # -- Project information
 
@@ -67,10 +203,28 @@ html_theme_options = {
     "sidebar_hide_name": False,
     "navigation_with_keys": True,
     "light_css_variables": {
+        # 文本颜色
+        "color-foreground-muted": "hsl(265, 100%, 45%)",
+        # 元素颜色
+        "color-brand-primary": "hsl(345, 100%, 45%)",
+        "color-brand-content": "hsl(185, 100%, 45%)",
         "color-brand-visited": "var(--color-brand-content)",
+        "color-highlight-on-target": "var(--color-highlight-vertical)",
+        "color-brand-word": "hsl(205, 100%, 45%)",
+        # 其他样式
+        "admonition-title-font-size": ".9rem",
     },
     "dark_css_variables": {
+        # 文本颜色
+        "color-foreground-muted": "hsl(265, 100%, 65%)",
+        # 元素颜色
+        "color-brand-primary": "hsl(345, 100%, 60%)",
+        "color-brand-content": "hsl(185, 100%, 60%)",
         "color-brand-visited": "var(--color-brand-content)",
+        "color-highlight-on-target": "var(--color-highlight-vertical)",
+        "color-brand-word": "hsl(205, 100%, 60%)",
+        # 其他样式
+        "admonition-title-font-size": ".9rem",
     },
     "footer_icons": [
         {
@@ -99,3 +253,6 @@ html_theme_options = {
 
 # -- Options for HTMLHelp output
 htmlhelp_basename = "日落图书馆"
+
+# -- Options for EPUB output
+epub_show_urls = "footnote"
