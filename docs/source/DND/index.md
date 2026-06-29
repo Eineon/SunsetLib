@@ -1,6 +1,6 @@
 # 龙与地下城
 
-[专用空白卡](https://www.kdocs.cn/l/ccXTjDXBVpfT)
+[专用空白卡](https://www.kdocs.cn/l/cu32ar495WiN)
 
 :::{toctree}
 :maxdepth: 2
